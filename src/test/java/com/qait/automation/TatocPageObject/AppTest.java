@@ -21,14 +21,9 @@ public class AppTest {
 		System.out.println("Uday kumar is a coder");
 		String dir = System.getProperty("user.dir");
 		System.out.println(System.getProperty("user.dir"));
-		String chromedriver= "chromedriver";  		System.setProperty("webdriver.chrome.driver", dir+"/"+chromedriver);
+		String chromedriver= "chromedriver";  		
+		System.setProperty("webdriver.chrome.driver", dir+"/"+chromedriver);
 		ChromeOptions options = new ChromeOptions();
-		options.addArguments("start-maximized"); // open Browser in maximized mode
-		options.addArguments("disable-infobars"); // disabling infobars
-		options.addArguments("--disable-extensions"); // disabling extensions
-		options.addArguments("--disable-gpu"); // applicable to windows os only
-		options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
-		options.addArguments("--no-sandbox");
 		options.addArguments("--headless");
 		driver = new ChromeDriver(options);
 		driver.get("http://10.0.1.86/tatoc");
