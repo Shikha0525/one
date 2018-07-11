@@ -90,6 +90,6 @@ public class AppTest {
 	@AfterTest
 	public void closePage() {
 
-		driver.quit();
+		//driver.quit();
 	}
 }
