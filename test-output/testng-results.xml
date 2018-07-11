@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="5" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="5998" started-at="2018-07-11T04:49:14Z" finished-at="2018-07-11T04:49:20Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="5998" started-at="2018-07-11T04:49:14Z" finished-at="2018-07-11T04:49:20Z">
+      <class name="com.qait.automation.TatocPageObject.AppTest">
+        <test-method status="PASS" signature="openPage()[pri:0, instance:com.qait.automation.TatocPageObject.AppTest@8bd1b6a]" name="openPage" is-config="true" duration-ms="2306" started-at="2018-07-11T10:19:14Z" finished-at="2018-07-11T10:19:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openPage -->
+        <test-method status="PASS" signature="step1_GridBoxPage()[pri:0, instance:com.qait.automation.TatocPageObject.AppTest@8bd1b6a]" name="step1_GridBoxPage" duration-ms="324" started-at="2018-07-11T10:19:16Z" finished-at="2018-07-11T10:19:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- step1_GridBoxPage -->
+        <test-method status="PASS" signature="step2_FrameAndDungeonPage()[pri:0, instance:com.qait.automation.TatocPageObject.AppTest@8bd1b6a]" name="step2_FrameAndDungeonPage" duration-ms="1617" started-at="2018-07-11T10:19:16Z" depends-on-methods="com.qait.automation.TatocPageObject.AppTest.step1_GridBoxPage" finished-at="2018-07-11T10:19:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- step2_FrameAndDungeonPage -->
+        <test-method status="PASS" signature="Step3_DragAndDropPage()[pri:0, instance:com.qait.automation.TatocPageObject.AppTest@8bd1b6a]" name="Step3_DragAndDropPage" duration-ms="426" started-at="2018-07-11T10:19:18Z" depends-on-methods="com.qait.automation.TatocPageObject.AppTest.step2_FrameAndDungeonPage" finished-at="2018-07-11T10:19:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Step3_DragAndDropPage -->
+        <test-method status="PASS" signature="Step4_PopupWindowsPage()[pri:0, instance:com.qait.automation.TatocPageObject.AppTest@8bd1b6a]" name="Step4_PopupWindowsPage" duration-ms="887" started-at="2018-07-11T10:19:18Z" depends-on-methods="com.qait.automation.TatocPageObject.AppTest.Step3_DragAndDropPage" finished-at="2018-07-11T10:19:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Step4_PopupWindowsPage -->
+        <test-method status="PASS" signature="Step5_CookieAdding()[pri:0, instance:com.qait.automation.TatocPageObject.AppTest@8bd1b6a]" name="Step5_CookieAdding" duration-ms="338" started-at="2018-07-11T10:19:19Z" depends-on-methods="com.qait.automation.TatocPageObject.AppTest.Step4_PopupWindowsPage" finished-at="2018-07-11T10:19:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Step5_CookieAdding -->
+        <test-method status="PASS" signature="closePage()[pri:0, instance:com.qait.automation.TatocPageObject.AppTest@8bd1b6a]" name="closePage" is-config="true" duration-ms="79" started-at="2018-07-11T10:19:19Z" finished-at="2018-07-11T10:19:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closePage -->
+      </class> <!-- com.qait.automation.TatocPageObject.AppTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
