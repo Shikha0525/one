@@ -19,10 +19,9 @@ public class AppTest {
 	@BeforeClass
 	public void openPage() {
 		System.out.println("Uday kumar is a coder");
-// 		String dir = System.getProperty("user.dir");
-// 		System.out.println(System.getProperty("user.dir"));
-// 		String chromedriver= "chromedriver";  
-// 		System.setProperty("webdriver.chrome.driver", dir+"/"+chromedriver);
+		String dir = System.getProperty("user.dir");
+		System.out.println(System.getProperty("user.dir"));
+		String chromedriver= "chromedriver";  		System.setProperty("webdriver.chrome.driver", dir+"/"+chromedriver);
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("start-maximized"); // open Browser in maximized mode
 		options.addArguments("disable-infobars"); // disabling infobars
