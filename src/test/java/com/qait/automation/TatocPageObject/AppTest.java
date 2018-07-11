@@ -19,13 +19,18 @@ public class AppTest {
 	@BeforeClass
 	public void openPage() {
 		System.out.println("Uday kumar is a coder");
-		String dir = System.getProperty("user.dir");
-		System.out.println(System.getProperty("user.dir"));
-		String chromedriver= "chromedriver";  
-		System.setProperty("webdriver.chrome.driver", dir+"/"+chromedriver);
+// 		String dir = System.getProperty("user.dir");
+// 		System.out.println(System.getProperty("user.dir"));
+// 		String chromedriver= "chromedriver";  
+// 		System.setProperty("webdriver.chrome.driver", dir+"/"+chromedriver);
 		ChromeOptions options = new ChromeOptions();
-		options.setExperimentalOption("useAutomationExtension", false);
-		driver = new ChromeDriver(options);
+		options.addArguments("start-maximized"); // open Browser in maximized mode
+		options.addArguments("disable-infobars"); // disabling infobars
+		options.addArguments("--disable-extensions"); // disabling extensions
+		options.addArguments("--disable-gpu"); // applicable to windows os only
+		options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+		options.addArguments("--no-sandbox");
+		driver = new ChromeDriver();
 		driver.get("http://10.0.1.86/tatoc");
 		driver.findElement(By.linkText("Basic Course")).click();
 		gridbox = new GridBox(driver);
