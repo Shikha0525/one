@@ -20,11 +20,10 @@ public class AppTest {
 		System.out.println("Uday kumar is a coder");
 		String dir = System.getProperty("user.dir");
 		System.out.println(System.getProperty("user.dir"));
-		String chromedriver= "chromedriver";
-		System.setProperty("webdriver.chrome.driver","pathto\\chromedriver.exe");    
+		String chromedriver= "chromedriver";  
+		System.setProperty("webdriver.chrome.driver", dir+"/"+chromedriver);
 		ChromeOptions options = new ChromeOptions();
 		options.setExperimentalOption("useAutomationExtension", false);
-		System.setProperty("webdriver.chrome.driver", dir+"/"+chromedriver);
 		driver = new ChromeDriver(options);
 		driver.get("http://10.0.1.86/tatoc");
 		driver.findElement(By.linkText("Basic Course")).click();
