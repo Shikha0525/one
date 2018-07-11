@@ -54,6 +54,7 @@ public class AppTest {
 		drag_and_drop.verifyisDragBoxPresent();
 
 		drag_and_drop.verifyisDropBoxPresent();
+		System.out.println("Uday kumar is a coder");
 
 		drag_and_drop.proceedingWithoutDragAndDropTakesToErrorPage();
 
@@ -80,6 +81,7 @@ public class AppTest {
 		cookie.isgenerateTokenButtonIsPresent();
 
 		cookie.proceedingWithoutAddingCookieTakesToErrorPage();
+		System.out.println("Uday kumar is a coder");
 
 		cookie.proceedingAfterAddingCookieTakesToEndPage();
 		
