@@ -7,6 +7,10 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.openqa.selenium.chrome.ChromeOptions;
+import java.net.MalformedURLException;
+import java.net.URL;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class AppTest {
 // 	WebDriver driver;
@@ -36,17 +40,18 @@ public class AppTest {
 // 	}
 
 	@Test
- 	public void step1_GridBoxPage() {
+ 	public void step1_GridBoxPage() throws MalformedURLException {
  		//gridbox.isclickingRedBoxTakesToErrorPage();
 
  		//gridbox.isclickingGreenBoxTakesToFrameAndDungeonPage();
 		String nodeURL1 = "http://10.0.18.148:5555/wd/hub";
-System.setProperty("webdriver.chrome.driver","F:\\chromedriver.exe");
-DesiredCapabilities capability1 = DesiredCapabilities.chrome();
-capability1.setBrowserName("chrome");
-capability1.setPlatform(Platform.WIN8_1);
-driver = new RemoteWebDriver(new URL(nodeURL1), capability1);
-driver.get("http://www.google.com");
+		URL url =new URL(nodeURL1);
+		System.setProperty("webdriver.chrome.driver","F:\\chromedriver.exe");
+		DesiredCapabilities capability1 = DesiredCapabilities.chrome();
+		capability1.setBrowserName("chrome");
+		//capability1.setPlatform(Platform.WIN8_1);
+		driver = new RemoteWebDriver(url, capability1);
+		driver.get("http://www.google.com");
 	}
 
 // 	@Test(dependsOnMethods = { "step1_GridBoxPage" })
