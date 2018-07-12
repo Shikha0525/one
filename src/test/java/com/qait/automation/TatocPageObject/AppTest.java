@@ -24,7 +24,7 @@ public class AppTest {
 		String chromedriver= "chromedriver";  		
 		System.setProperty("webdriver.chrome.driver", dir+"/"+chromedriver);
 		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--headless");
+		//options.addArguments("--headless");
 		driver = new ChromeDriver(options);
 		driver.get("http://10.0.1.86/tatoc");
 		driver.findElement(By.linkText("Basic Course")).click();
