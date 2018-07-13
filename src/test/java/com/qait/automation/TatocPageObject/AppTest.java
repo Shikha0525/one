@@ -13,97 +13,90 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class AppTest {
-// 	WebDriver driver;
-// 	GridBox gridbox;
-// 	FrameAndDungeon frame_and_dungeon;
-// 	DragAndDropActions drag_and_drop;
-// 	PopupWindowsActions popup_windows;
-// 	CookieActions cookie;
+ 	WebDriver driver;
+ 	GridBox gridbox;
+ 	FrameAndDungeon frame_and_dungeon;
+ 	DragAndDropActions drag_and_drop;
+ 	PopupWindowsActions popup_windows;
+ 	CookieActions cookie;
 
-// 	@BeforeClass
-// 	public void openPage() {
-// 		System.out.println("Uday kumar is a coder");
-// 		String dir = System.getProperty("user.dir");
-// 		System.out.println(System.getProperty("user.dir"));
-// 		String chromedriver= "chromedriver";  		
-// 		System.setProperty("webdriver.chrome.driver", dir+"/"+chromedriver);
-// 		ChromeOptions options = new ChromeOptions();
-// 		//options.addArguments("--headless");
-// 		driver = new ChromeDriver(options);
-// 		driver.get("http://10.0.1.86/tatoc");
-// 		driver.findElement(By.linkText("Basic Course")).click();
-// 		gridbox = new GridBox(driver);
-// 		frame_and_dungeon = new FrameAndDungeon(driver);
-// 		drag_and_drop = new DragAndDropActions(driver);
-// 		popup_windows = new PopupWindowsActions(driver);
-// 		cookie = new CookieActions(driver);
-// 	}
+ 	@BeforeClass
+ 	public void openPage() {
+ 		System.out.println("Uday kumar is a coder");
+ 		String dir = System.getProperty("user.dir");
+ 		System.out.println(System.getProperty("user.dir"));
+ 		String chromedriver= "chromedriver";  		
+ 		System.setProperty("webdriver.chrome.driver", dir+"/"+chromedriver);
+ 		ChromeOptions options = new ChromeOptions();
+ 		//options.addArguments("--headless");
+ 		driver = new ChromeDriver(options);
+ 		driver.get("http://10.0.1.86/tatoc");
+ 		driver.findElement(By.linkText("Basic Course")).click();
+ 		gridbox = new GridBox(driver);
+ 		frame_and_dungeon = new FrameAndDungeon(driver);
+ 		drag_and_drop = new DragAndDropActions(driver);
+ 		popup_windows = new PopupWindowsActions(driver);
+ 		cookie = new CookieActions(driver);
+ 	}
 
 	@Test
  	public void step1_GridBoxPage() throws MalformedURLException {
- 		//gridbox.isclickingRedBoxTakesToErrorPage();
+ 		gridbox.isclickingRedBoxTakesToErrorPage();
 
- 		//gridbox.isclickingGreenBoxTakesToFrameAndDungeonPage();
-		String nodeURL1 = "http://10.0.18.148:5555/wd/hub";
-		URL url =new URL(nodeURL1);
-		System.setProperty("webdriver.chrome.driver","F:\\chromedriver.exe");
-		DesiredCapabilities capability1 = DesiredCapabilities.chrome();
-		capability1.setBrowserName("chrome");
-		//capability1.setPlatform(Platform.WIN8_1);
-		driver = new RemoteWebDriver(url, capability1);
-		driver.get("http://www.google.com");
+ 		gridbox.isclickingGreenBoxTakesToFrameAndDungeonPage();
+
 	}
 
-// 	@Test(dependsOnMethods = { "step1_GridBoxPage" })
-// 	public void step2_FrameAndDungeonPage() {
-// 		frame_and_dungeon.isclickingWithoutColorMatchingTakesToErrorPage();
+ 	@Test(dependsOnMethods = { "step1_GridBoxPage" })
+ 	public void step2_FrameAndDungeonPage() {
+ 		frame_and_dungeon.isclickingWithoutColorMatchingTakesToErrorPage();
 
-// 		frame_and_dungeon.isclickingWithmatchingColorsTakesToDragAndDropBoxPage();
-// 	}
+ 		frame_and_dungeon.isclickingWithmatchingColorsTakesToDragAndDropBoxPage();
+ 	}
 
-// 	@Test(dependsOnMethods = { "step2_FrameAndDungeonPage" })
-// 	public void Step3_DragAndDropPage() {
-// 		drag_and_drop.verifyisDragBoxPresent();
+ 	@Test(dependsOnMethods = { "step2_FrameAndDungeonPage" })
+ 	public void Step3_DragAndDropPage() {
+ 		drag_and_drop.verifyisDragBoxPresent();
 
-// 		drag_and_drop.verifyisDropBoxPresent();
-// 		System.out.println("Uday kumar is a coder");
+ 		drag_and_drop.verifyisDropBoxPresent();
+ 		System.out.println("Uday kumar is a coder");
 
-// 		drag_and_drop.proceedingWithoutDragAndDropTakesToErrorPage();
+ 		drag_and_drop.proceedingWithoutDragAndDropTakesToErrorPage();
 
-// 		drag_and_drop.proceedingWithDragAndDropTakesToPopupWindowsPage();
-// 	}
+ 		drag_and_drop.proceedingWithDragAndDropTakesToPopupWindowsPage();
+ 	}
 
-// 	@Test(dependsOnMethods = { "Step3_DragAndDropPage" })
-// 	public void Step4_PopupWindowsPage() {
-// 		popup_windows.proceedingWithoutOpeningNewWindowTakesToErrorPage();
+ 	@Test(dependsOnMethods = { "Step3_DragAndDropPage" })
+ 	public void Step4_PopupWindowsPage() {
+ 		popup_windows.proceedingWithoutOpeningNewWindowTakesToErrorPage();
 
-// 		popup_windows.isLaunchWindowButtonPresent();
+ 		popup_windows.isLaunchWindowButtonPresent();
 
-// 		popup_windows.isClickingLaunchOpensNewWinDow();
+ 		popup_windows.isClickingLaunchOpensNewWinDow();
 
-// 		popup_windows.proceedWithoutTypingInTextBoxTakesToErrorPage();
+ 		popup_windows.proceedWithoutTypingInTextBoxTakesToErrorPage();
 
-// 		popup_windows.submittingAfterTypingInTextBoxTakesToPopupWindowsPage();
+ 		popup_windows.submittingAfterTypingInTextBoxTakesToPopupWindowsPage();
 
-// 		popup_windows.proceedingCompletingThePopupWindowsTakesToTokenPage();
-// 	}
+ 		popup_windows.proceedingCompletingThePopupWindowsTakesToTokenPage();
+ 	}
 
-// 	@Test(dependsOnMethods = { "Step4_PopupWindowsPage" })
-// 	public void Step5_CookieAdding() {
-// 		cookie.isgenerateTokenButtonIsPresent();
+ 	@Test(dependsOnMethods = { "Step4_PopupWindowsPage" })
+  	public void Step5_CookieAdding() {
+ 		cookie.isgenerateTokenButtonIsPresent();
 
-// 		cookie.proceedingWithoutAddingCookieTakesToErrorPage();
-// 		System.out.println("Uday kumar is a coder");
+ 		cookie.proceedingWithoutAddingCookieTakesToErrorPage();
+ 		System.out.println("Uday kumar is a coder");
 
-// 		cookie.proceedingAfterAddingCookieTakesToEndPage();
+ 		cookie.proceedingAfterAddingCookieTakesToEndPage();
 		
-// 		System.out.println("hello world");
-// 	}
+ 		System.out.println("hello world");
+ 	}
 	
 
-// 	@AfterTest
-// 	public void closePage() {
+ 	@AfterTest
+ 	public void closePage() {
 
-// 		//driver.quit();
-// 	}
+ 		driver.quit();
+ 	}
 }
